@@ -1,0 +1,26 @@
+.logo {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0);
+}
+.form-range::-webkit-slider-runnable-track {
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(to right, #e7dcdb, #ffffff);
+  border-radius: 2px;
+  outline: none;
+}
+/* .form::-webkit-slider-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #ccc;
+} */
+.form-range {
+  width: 150px !important;
+}
+.bottoni {
+  background-color: #464545 !important;
+}
