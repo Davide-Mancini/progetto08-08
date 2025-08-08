@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import SmallCard from "./smallCard";
-import { Col, Container, Row } from "react-bootstrap";
+import { Alert, Col, Container, Row } from "react-bootstrap";
 import { useState } from "react";
 import { Heart } from "react-bootstrap-icons";
 import { ADD_TO_FAVOURITE } from "../redux/action";
@@ -30,9 +30,8 @@ const NuoveUscite = () => {
           {song.data?.slice(0, limite).map((s) => {
             console.log(s);
             return (
-              <Col xs={4}>
+              <Col xs={4} key={s.id}>
                 <SmallCard
-                  key={s.album.id}
                   immagine={s.album.cover_big}
                   titolo={s.album.title}
                   artista={s.artist.name}
@@ -41,12 +40,14 @@ const NuoveUscite = () => {
                   className=" ms-4"
                   style={{ color: red }}
                   onClick={() => {
+                    alert("Brano Aggiunto ai Preferiti!");
                     setRed("red");
                     dispatch({
                       type: ADD_TO_FAVOURITE,
                       payload: s,
                     });
                   }}
+                  // NON SONO RIUSCITO A RISOLVERE IL PROBLEMA CHE AL CLICK COLORA TUTTI I CUORI
                 />
                 <SmallCard />
               </Col>
