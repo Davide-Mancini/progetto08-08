@@ -8,19 +8,18 @@ const MyFavourite = () => {
   });
   return (
     <>
-      <h1>I MIEI BRANI PREFERITI</h1>
+      <h1 className=" text-center my-5  ">I MIEI BRANI PREFERITI</h1>
       <Container>
         <Row>
-          <Col sm={12}>
-            <ul style={{ listStyle: "none" }}>
-              {favourites.map((favourite, i) => {
-                <li key={i}>
-                  <h5>{favourite.album.title}</h5>
-                  <h6>{favourite.artist.name}</h6>
-                </li>;
-              })}
-            </ul>
-          </Col>
+          {favourites.map((favourite, i) => {
+            return (
+              <Col sm={3} key={i}>
+                <img src={favourite.album.cover_medium} alt="" />
+                <h5>{favourite.album.title}</h5>
+                <h6>{favourite.artist.name}</h6>
+              </Col>
+            );
+          })}
         </Row>
       </Container>
     </>

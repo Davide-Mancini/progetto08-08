@@ -6,7 +6,7 @@ const NuoviEpisodiRadio = () => {
     <>
       <Container>
         <Row>
-          <h2 className=" mt-5">Nuovi Episodi radio</h2>
+          <h2 className=" mt-5 mb-3">Nuovi Episodi radio</h2>
           <Col xs={4} md={3}>
             <SmallCard
               immagine={"./src/assets/images/2a.png"}

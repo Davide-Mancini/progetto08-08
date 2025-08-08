@@ -46,17 +46,13 @@ const App = () => {
                     </>
                   }
                 ></Route>
-                {/* <Route path="/" element={}></Route>
-                <Route path="/" element={}></Route>
-                <Route path="/" element={}></Route> */}
+
+                <Route path="/favourite" element={<MyFavourite />}></Route>
               </Routes>
             </Col>
           </Row>
         </Container>
-        <Routes>
-          <Route path="/favourite" element={<MyFavourite />}></Route>
-        </Routes>
-        <MyPLayer />
+
         <MyFooter />
       </BrowserRouter>
     </>

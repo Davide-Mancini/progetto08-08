@@ -7,6 +7,7 @@ import { Button, Col } from "react-bootstrap";
 import { Person } from "react-bootstrap-icons";
 import ControlloVolume from "./controlloVolume";
 import MyPLayer from "./MyPlayer";
+import { Link } from "react-router-dom";
 function MyNavbar() {
   return (
     <Navbar expand="lg" className=" bg-body-secondary" data-bs-theme="dark">
@@ -20,10 +21,7 @@ function MyNavbar() {
             <MyPLayer />
           </Col>
           <Col lg={5}>
-            <Navbar.Brand
-              href="#home"
-              className=" d-flex justify-content-center  h-100"
-            >
+            <Link to={"/"} className=" d-flex justify-content-center  h-100">
               <img
                 src="./src/assets/logos/music.svg"
                 alt=""
@@ -36,7 +34,7 @@ function MyNavbar() {
                   className="logo text-center d-none d-lg-flex"
                 />
               </div>
-            </Navbar.Brand>
+            </Link>
           </Col>
           <Col lg={2}>
             <ControlloVolume />

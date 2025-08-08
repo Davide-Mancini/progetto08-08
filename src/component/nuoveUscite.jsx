@@ -18,13 +18,15 @@ const NuoveUscite = () => {
     <>
       <Container>
         <Row>
-          <h3
+          <h3 className=" mt-5 mb-3">Nuove Uscite </h3>
+          <h6
+            className="mb-3"
             onClick={() => {
               setLimite(20);
             }}
           >
-            Nuove Uscite{" "}
-          </h3>
+            Mostra di più
+          </h6>
           {song.data?.slice(0, limite).map((s) => {
             console.log(s);
             return (
@@ -36,6 +38,7 @@ const NuoveUscite = () => {
                   artista={s.artist.name}
                 />
                 <Heart
+                  className=" ms-4"
                   style={{ color: red }}
                   onClick={() => {
                     setRed("red");

@@ -10,7 +10,7 @@ import {
   HouseDoor,
   UiChecksGrid,
 } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
+import { Link, Links } from "react-router-dom";
 
 function MySidebar() {
   return (
@@ -19,11 +19,13 @@ function MySidebar() {
       className="bg-body-tertiary flex-column d-none d-sm-none d-md-none d-lg-flex h-100 "
     >
       <Container fluid className="flex-column align-items-start">
-        <img
-          src="./src/assets/logos/music.svg"
-          alt=""
-          className="logo my-3 text-start "
-        />
+        <Link to={"/"}>
+          <img
+            src="./src/assets/logos/music.svg"
+            alt=""
+            className="logo my-3 text-start "
+          />
+        </Link>
         <Form className="d-flex my-3">
           <Form.Control
             type="search"
@@ -35,12 +37,12 @@ function MySidebar() {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className=" my-2 my-lg-0 flex-column text-start" navbarScroll>
-            <Nav.Link href="#action1">
+            <Link to={"/"} className=" nav-link">
               <b>
                 {" "}
                 <HouseDoor className=" text-danger" /> Home
               </b>
-            </Nav.Link>
+            </Link>
             <Nav.Link href="#action2">
               <b>
                 {" "}
